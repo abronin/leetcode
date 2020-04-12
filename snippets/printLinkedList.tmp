@@ -1,0 +1,15 @@
+func (head *ListNode) String() string {
+	res := ""
+
+	current := head
+	for current != nil {
+		if current.Next == nil {
+			res = res + fmt.Sprintf("%d", current.Val)
+		} else {
+			res = res + fmt.Sprintf("%d -> ", current.Val)
+		}
+		current = current.Next
+	}
+
+	return res
+}
